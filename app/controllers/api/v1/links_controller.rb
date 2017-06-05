@@ -12,4 +12,9 @@ class Api::V1::LinksController < ApplicationController
       render status: 200, json: HotRead.get_recent
     end
   end
+
+  def index
+    @hot_reads = HotRead.get_recent
+    render json: @hot_reads
+  end
 end
