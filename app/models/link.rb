@@ -10,6 +10,10 @@ class Link
         counted_links[link[:url]] = 1
       end
     end
-    counted_links
+    sort_links_by_count(counted_links)
+  end
+
+  def sort_links_by_count(counted_links)
+    counted_links.sort_by { |key, value| value}
   end
 end
