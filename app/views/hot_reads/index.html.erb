@@ -1,5 +1,7 @@
 <h1>Hot Reads</h1>
 
-<% @hot_reads.each do |link, count| %>
-
-<% end %>
+<ol>
+  <% @hot_reads.each do |link, count| %>
+    <li><%= link_to link, link %></li>
+  <% end %>
+</ol>
